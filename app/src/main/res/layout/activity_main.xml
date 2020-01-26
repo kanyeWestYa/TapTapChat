@@ -16,6 +16,7 @@
         android:layout_marginEnd="247dp"
         android:background="@drawable/roundedbutton"
         android:text="Action"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +32,7 @@
         android:layout_marginBottom="126dp"
         android:background="@drawable/roundedbutton"
         android:text="Location"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -47,6 +49,7 @@
         android:layout_marginBottom="101dp"
         android:background="@drawable/roundedbutton"
         android:text="Person"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/button1"
         app:layout_constraintHorizontal_bias="1.0"
@@ -63,6 +66,7 @@
         android:layout_marginBottom="100dp"
         android:background="@drawable/roundedbutton"
         android:text="Mood"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -79,6 +83,7 @@
         android:layout_marginBottom="100dp"
         android:background="@drawable/roundedbutton"
         android:text="Desctiption"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -94,6 +99,7 @@
         android:layout_marginEnd="74dp"
         android:background="@drawable/roundedbutton"
         android:text="Object"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,10 +110,11 @@
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_marginStart="254dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="69dp"
         android:background="@drawable/roundedbutton"
         android:text="Time"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,6 +130,7 @@
         android:layout_marginBottom="91dp"
         android:background="@drawable/roundedbutton"
         android:text="Question"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.761"
@@ -169,26 +177,39 @@
         tools:layout_editor_absoluteY="53dp"
         tools:visibility="invisible" />
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/linearLayout"
         android:layout_width="414dp"
         android:layout_height="62dp"
+        android:background="#759F1DC2"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="667dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="9dp"
+            android:backgroundTint="#9F1DC2"
             android:text="Send" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="300dp"
-            android:layout_height="41dp"
-            android:layout_marginBottom="28dp"
-            android:text="Touch ideas to start" />
-    </LinearLayout>
+            android:layout_width="301dp"
+            android:layout_height="51dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginBottom="5dp"
+            android:text="Touch ideas to start"
+            android:textSize="16sp" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

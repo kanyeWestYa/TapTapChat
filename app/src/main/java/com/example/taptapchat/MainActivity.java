@@ -3,26 +3,17 @@ package com.example.taptapchat;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.firebase.client.DataSnapshot;
-import com.firebase.client.FirebaseError;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import org.w3c.dom.Text;
 
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends Activity {
     Button btnd;
     Button btna;
     Button btnb;
@@ -58,11 +49,10 @@ public class MainActivity extends AppCompatActivity {
         buttonPop((Button)findViewById(R.id.button5));
         buttonPop((Button)findViewById(R.id.button6));
         buttonPop((Button)findViewById(R.id.button7));
-
     }
 
     private void buttonPop(final Button b){
-        b.setTextSize(10.0f);
+        b.setTextSize(12.0f);
         b.setTextColor(Color.WHITE);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -70,41 +60,31 @@ public class MainActivity extends AppCompatActivity {
                 createPopB(b.getText().toString(), b.getX(), b.getY());
                 createPopC(b.getText().toString(), b.getX(), b.getY());
                 createPopD(b.getText().toString(), b.getX(), b.getY());
+                writeFinal(b.getText());
             }
         });
     }
 
 
-    static int xOff = 120;
+    static int xOff = 130;
     static int yOff = 120;
 
 
     private void createPopA(String parent, float x, float y) {
         btna.setX(x + xOff);
-        btna.setY(y + yOff);
-        if(parent == "Actions") {
-            btna.setText("Going"); }
-        else if (parent == "Question") {
-            btna.setText("Who?"); }
-        else if (parent == "Adjective") {
-                btna.setText("Fast"); }
-        else if (parent == "Location") {
-            btna.setText("Here"); }
-        else if (parent == "Mood") {
-            btna.setText("Happy"); }
-        else if (parent == "Object") {
-            btna.setText("Car"); }
-        else if (parent == "Person") {
-            btna.setText("I?"); }
-        else if (parent == "Time") {
-            btna.setText("Yesterday"); }
+        btna.setY(y + yOff + 30);
+        if (parent.equals("Action")) {
+            btna.setText("Look");
+        } else if (parent.equals("Question")){
+            btna.setText("Who");
+        }
         btna.setVisibility(View.VISIBLE);
     }
 
     private void createPopB(String parent, float x, float y) {
         btnb.setX(x + xOff);
         btnb.setY(y - yOff);
-        btnb.setText("Coming");
+        btnb.setText("Come");
         btnb.setVisibility(View.VISIBLE);
 
     }
@@ -112,17 +92,20 @@ public class MainActivity extends AppCompatActivity {
     private void createPopC(String parent, float x, float y) {
         btnc.setX(x - xOff);
         btnc.setY(y - yOff);
-        btnc.setText("walking");
+        btnc.setText("Walk");
         btnc.setVisibility(View.VISIBLE);
 
     }
 
     private void createPopD(String parent, float x, float y) {
         btnd.setX(x - xOff);
-        btnd.setY(y + yOff);
-        btnd.setText("running");
+        btnd.setY(y + yOff + 30);
+        btnd.setText("Run");
         btnd.setVisibility(View.VISIBLE);
 
+    }
+
+    private void writeFinal(String name){
     }
 }
 
