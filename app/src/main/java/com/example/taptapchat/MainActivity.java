@@ -41,6 +41,8 @@ public class MainActivity extends Activity {
         btnc = (Button) findViewById(R.id.buttonc);
         btnd = (Button) findViewById(R.id.buttond);
 
+        btna.setVisibility(View.INVISIBLE);
+
         buttonPop((Button)findViewById(R.id.button0));
         buttonPop((Button)findViewById(R.id.button1));
         buttonPop((Button)findViewById(R.id.button2));
@@ -71,7 +73,7 @@ public class MainActivity extends Activity {
 
 
     private void createPopA(String parent, float x, float y) {
-        btna.setVisibility(View.INVISIBLE);
+
         btna.setX(x + xOff);
         btna.setY(y + yOff + 30);
         if (parent.equals("Action")) {
