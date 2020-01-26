@@ -60,7 +60,7 @@ public class MainActivity extends Activity {
                 createPopB(b.getText().toString(), b.getX(), b.getY());
                 createPopC(b.getText().toString(), b.getX(), b.getY());
                 createPopD(b.getText().toString(), b.getX(), b.getY());
-                writeFinal(b.getText());
+                writeFinal(b.getText().toString());
             }
         });
     }
@@ -106,6 +106,7 @@ public class MainActivity extends Activity {
     }
 
     private void writeFinal(String name){
+        
     }
 }
 
