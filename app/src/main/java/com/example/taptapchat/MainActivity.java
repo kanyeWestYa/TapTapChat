@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
 
 
     private void createPopA(String parent, float x, float y) {
+        btna.setVisibility(View.INVISIBLE);
         btna.setX(x + xOff);
         btna.setY(y + yOff + 30);
         if (parent.equals("Action")) {
