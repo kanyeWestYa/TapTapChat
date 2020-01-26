@@ -82,21 +82,29 @@ public class MainActivity extends AppCompatActivity {
     private void createPopA(String parent, float x, float y) {
         btna.setX(x + xOff);
         btna.setY(y + yOff);
-        if(parent == "Action") {
-            btna.setText("Going");
-        } else if (parent == "Question"){
-            btna.setText("Who?");
-        }
-
-
-
+        if(parent == "Actions") {
+            btna.setText("Going"); }
+        else if (parent == "Question") {
+            btna.setText("Who?"); }
+        else if (parent == "Adjective") {
+                btna.setText("Fast"); }
+        else if (parent == "Location") {
+            btna.setText("Here"); }
+        else if (parent == "Mood") {
+            btna.setText("Happy"); }
+        else if (parent == "Object") {
+            btna.setText("Car"); }
+        else if (parent == "Person") {
+            btna.setText("I?"); }
+        else if (parent == "Time") {
+            btna.setText("Yesterday"); }
         btna.setVisibility(View.VISIBLE);
     }
 
     private void createPopB(String parent, float x, float y) {
         btnb.setX(x + xOff);
         btnb.setY(y - yOff);
-        btnb.setText("coming");
+        btnb.setText("Coming");
         btnb.setVisibility(View.VISIBLE);
 
     }
