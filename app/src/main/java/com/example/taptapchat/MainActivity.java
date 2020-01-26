@@ -73,7 +73,7 @@ public class MainActivity extends Activity {
     private void createPopA(String parent, float x, float y) {
         btna.setX(x + xOff);
         btna.setY(y + yOff + 30);
-        if (parent.equals("Actions")) {
+        if (parent.equals("Action")) {
             btna.setText("Going");
         } else if (parent.equals("Adjective")){
             btna.setText("Fast"); }
@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
             btna.setText("Car"); }
         else if (parent.equals("Person")) {
             btna.setText("I"); }
-        else if (parent.equals("Questions")) {
+        else if (parent.equals("Question")) {
             btna.setText("Where"); }
         else if (parent.equals("Time")) {
             btna.setText("Yesterday"); }
@@ -96,7 +96,7 @@ public class MainActivity extends Activity {
     private void createPopB(String parent, float x, float y) {
         btnb.setX(x + xOff);
         btnb.setY(y - yOff);
-        if (parent.equals("Actions")) {
+        if (parent.equals("Action")) {
             btnb.setText("Coming");
         } else if (parent.equals("Adjective")){
             btnb.setText("Slow"); }
@@ -108,7 +108,7 @@ public class MainActivity extends Activity {
             btnb.setText("Clothes"); }
         else if (parent.equals("Person")) {
             btnb.setText("You"); }
-        else if (parent.equals("Questions")) {
+        else if (parent.equals("Question")) {
             btnb.setText("When"); }
         else if (parent.equals("Time")) {
             btnb.setText("Today"); }
@@ -119,7 +119,7 @@ public class MainActivity extends Activity {
     private void createPopC(String parent, float x, float y) {
         btnc.setX(x - xOff);
         btnc.setY(y - yOff);
-        if (parent.equals("Actions")) {
+        if (parent.equals("Action")) {
             btnc.setText("Eating");
         } else if (parent.equals("Adjective")){
             btnc.setText("Good"); }
@@ -131,7 +131,7 @@ public class MainActivity extends Activity {
             btnc.setText("Food"); }
         else if (parent.equals("Person")) {
             btnc.setText("They"); }
-        else if (parent.equals("Questions")) {
+        else if (parent.equals("Question")) {
             btnc.setText("How"); }
         else if (parent.equals("Time")) {
             btnc.setText("Tomorrow"); }
@@ -142,7 +142,7 @@ public class MainActivity extends Activity {
     private void createPopD(String parent, float x, float y) {
         btnd.setX(x - xOff);
         btnd.setY(y + yOff + 30);
-        if (parent.equals("Actions")) {
+        if (parent.equals("Action")) {
             btnd.setText("Sleeping");
         } else if (parent.equals("Adjective")){
             btnd.setText("Bad"); }
@@ -154,7 +154,7 @@ public class MainActivity extends Activity {
             btnd.setText("Home"); }
         else if (parent.equals("Person")) {
             btnd.setText("Them"); }
-        else if (parent.equals("Questions")) {
+        else if (parent.equals("Question")) {
             btnd.setText("What"); }
         else if (parent.equals("Time")) {
             btnd.setText("Now"); }
